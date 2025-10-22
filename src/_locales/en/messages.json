@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Cappuccino"
+  },
+  "viewAll": {
+    "message": "View All"
+  },
+  "itemsSaved": {
+    "message": "items saved"
+  },
+  "copyItem": {
+    "message": "Copy"
+  },
+  "deleteItem": {
+    "message": "Delete"
+  },
+  "openItem": {
+    "message": "Open"
+  },
+  "openImage": {
+    "message": "Open Image"
+  },
+  "openVideo": {
+    "message": "Open Video"
+  },
+  "openArticle": {
+    "message": "Open Article"
+  },
+  "calendarFrom": {
+    "message": "From:"
+  },
+  "calendarTo": {
+    "message": "To:"
+  },
+  "clearDates": {
+    "message": "Clear dates"
+  },
+  "allWebsites": {
+    "message": "All websites"
+  },
+  "filterAll": {
+    "message": "All"
+  },
+  "filterText": {
+    "message": "Text"
+  },
+  "filterImages": {
+    "message": "Images"
+  },
+  "filterVideos": {
+    "message": "Videos"
+  },
+  "filterResult": {
+    "message": "result"
+  },
+  "filterResults": {
+    "message": "results"
+  },
+  "searchPlaceholder": {
+    "message": "Search saved content..."
+  },
+  "errorNoItems": {
+    "message": "No items found"
+  },  
+  "errorNoSavedItems": {
+    "message": "No saved items yet"
+  },
+  "errorAdjustFilters": {
+    "message": "Try adjusting your filters"
+  },
+  "rightClickSave": {
+    "message": "Right-click on selected text and choose \"Save selected text\""
+  },
+  "confirmDelete": {
+    "message": "Are you sure you want to delete this item?"
+  },
+  "saveTextSuccess": {
+    "message": " Selected text saved successfully!"
+  },
+  "saveTextError": {
+    "message": "Error saving selected text."
+  },
+  "saveVideoSuccess": {
+    "message": " YouTube video saved successfully!"
+  },
+  "saveVideoError": {
+    "message": "Error saving YouTube video"
+  },
+  "saveImageSuccess": {
+    "message": " Image URL saved successfully!"
+  },
+  "saveImageError": {
+    "message": "Error saving image URL"
+  },
+  "failedToCopy": {
+    "message": "Failed to copy"
+  },
+  "saveSelectedText": {
+    "message": "Save selected text"
+  },
+  "saveImageUrl": {
+    "message": "Save image URL"
+  },
+  "saveYouTubeVideo": {
+    "message": "Save YouTube video"
+  },
+  "buyMeACappuccino": {
+    "message": "Buy me a Cappuccino"
+  },
+  "leaveReview": {
+    "message": "Leave a review"
+  },
+  "footer": {
+    "message": "Made with ❤️ in NL by $AUTHOR$",
+    "placeholders": {
+      "author": {
+        "content": "$1",
+        "example": "CitizenDB"
+      }
+    }
+  }
+}

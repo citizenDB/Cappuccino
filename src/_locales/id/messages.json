@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Cappuccino"
+  },
+  "viewAll": {
+    "message": "Lihat Semua"
+  },
+  "itemsSaved": {
+    "message": "item tersimpan"
+  },
+  "copyItem": {
+    "message": "Salin"
+  },
+  "deleteItem": {
+    "message": "Hapus"
+  },
+  "openItem": {
+    "message": "Buka"
+  },
+  "openImage": {
+    "message": "Buka Gambar"
+  },
+  "openVideo": {
+    "message": "Buka Video"
+  },
+  "openArticle": {
+    "message": "Buka Artikel"
+  },
+  "calendarFrom": {
+    "message": "Dari:"
+  },
+  "calendarTo": {
+    "message": "Sampai:"
+  },
+  "clearDates": {
+    "message": "Hapus tanggal"
+  },
+  "allWebsites": {
+    "message": "Semua situs web"
+  },
+  "filterAll": {
+    "message": "Semua"
+  },
+  "filterText": {
+    "message": "Teks"
+  },
+  "filterImages": {
+    "message": "Gambar"
+  },
+  "filterVideos": {
+    "message": "Video"
+  },
+  "filterResult": {
+    "message": "hasil"
+  },
+  "filterResults": {
+    "message": "hasil"
+  },
+  "searchPlaceholder": {
+    "message": "Cari konten tersimpan..."
+  },
+  "errorNoItems": {
+    "message": "Tidak ada item ditemukan"
+  },
+  "errorNoSavedItems": {
+    "message": "Belum ada item tersimpan"
+  },
+  "errorAdjustFilters": {
+    "message": "Coba sesuaikan filter Anda"
+  },
+  "rightClickSave": {
+    "message": "Klik kanan pada teks yang dipilih dan pilih \"Simpan teks yang dipilih\""
+  },
+  "confirmDelete": {
+    "message": "Apakah Anda yakin ingin menghapus item ini?"
+  },
+  "saveTextSuccess": {
+    "message": " Teks yang dipilih berhasil disimpan!"
+  },
+  "saveTextError": {
+    "message": "Gagal menyimpan teks yang dipilih."
+  },
+  "saveVideoSuccess": {
+    "message": " Video YouTube berhasil disimpan!"
+  },
+  "saveVideoError": {
+    "message": "Gagal menyimpan video YouTube"
+  },
+  "saveImageSuccess": {
+    "message": " URL gambar berhasil disimpan!"
+  },
+  "saveImageError": {
+    "message": "Gagal menyimpan URL gambar"
+  },
+  "failedToCopy": {
+    "message": "Gagal menyalin"
+  },
+  "saveSelectedText": {
+    "message": "Simpan teks yang dipilih"
+  },
+  "saveImageUrl": {
+    "message": "Simpan URL gambar"
+  },
+  "saveYouTubeVideo": {
+    "message": "Simpan video YouTube"
+  },
+  "buyMeACappuccino": {
+    "message": "Belikan saya Cappuccino"
+  },
+  "leaveReview": {
+    "message": "Tinggalkan ulasan"
+  },
+  "footer": {
+    "message": "Made with ❤️ in NL by $AUTHOR$",
+    "placeholders": {
+      "author": {
+        "content": "$1",
+        "example": "CitizenDB"
+      }
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Cappuccino"
+  },
+  "viewAll": {
+    "message": "Tout voir"
+  },
+  "itemsSaved": {
+    "message": "éléments sauvegardés"
+  },
+  "copyItem": {
+    "message": "Copier"
+  },
+  "deleteItem": {
+    "message": "Supprimer"
+  },
+  "openItem": {
+    "message": "Ouvrir"
+  },
+  "openImage": {
+    "message": "Ouvrir l'image"
+  },
+  "openVideo": {
+    "message": "Ouvrir la vidéo"
+  },
+  "openArticle": {
+    "message": "Ouvrir l'article"
+  },
+  "calendarFrom": {
+    "message": "Du :"
+  },
+  "calendarTo": {
+    "message": "Au :"
+  },
+  "clearDates": {
+    "message": "Effacer les dates"
+  },
+  "allWebsites": {
+    "message": "Tous les sites web"
+  },
+  "filterAll": {
+    "message": "Tout"
+  },
+  "filterText": {
+    "message": "Texte"
+  },
+  "filterImages": {
+    "message": "Images"
+  },
+  "filterVideos": {
+    "message": "Vidéos"
+  },
+  "filterResult": {
+    "message": "résultat"
+  },
+  "filterResults": {
+    "message": "résultats"
+  },
+  "searchPlaceholder": {
+    "message": "Rechercher dans le contenu sauvegardé..."
+  },
+  "errorNoItems": {
+    "message": "Aucun élément trouvé"
+  },
+  "errorNoSavedItems": {
+    "message": "Aucun élément sauvegardé pour le moment"
+  },
+  "errorAdjustFilters": {
+    "message": "Essayez d'ajuster vos filtres"
+  },
+  "rightClickSave": {
+    "message": "Faites un clic droit sur le texte sélectionné et choisissez \"Sauvegarder le texte sélectionné\""
+  },
+  "confirmDelete": {
+    "message": "Êtes-vous sûr de vouloir supprimer cet élément ?"
+  },
+  "saveTextSuccess": {
+    "message": " Texte sélectionné sauvegardé avec succès !"
+  },
+  "saveTextError": {
+    "message": "Erreur lors de la sauvegarde du texte sélectionné."
+  },
+  "saveVideoSuccess": {
+    "message": " Vidéo YouTube sauvegardée avec succès !"
+  },
+  "saveVideoError": {
+    "message": "Erreur lors de la sauvegarde de la vidéo YouTube"
+  },
+  "saveImageSuccess": {
+    "message": " URL de l'image sauvegardée avec succès !"
+  },
+  "saveImageError": {
+    "message": "Erreur lors de la sauvegarde de l'URL de l'image"
+  },
+  "failedToCopy": {
+    "message": "Échec de la copie"
+  },
+  "saveSelectedText": {
+    "message": "Sauvegarder le texte sélectionné"
+  },
+  "saveImageUrl": {
+    "message": "Sauvegarder l'URL de l'image"
+  },
+  "saveYouTubeVideo": {
+    "message": "Sauvegarder la vidéo YouTube"
+  },
+  "buyMeACappuccino": {
+    "message": "Offrez-moi un Cappuccino"
+  },
+  "leaveReview": {
+    "message": "Laisser un avis"
+  },
+  "footer": {
+    "message": "Made with ❤️ in NL by $AUTHOR$",
+    "placeholders": {
+      "author": {
+        "content": "$1",
+        "example": "CitizenDB"
+      }
+    }
+  }
+}

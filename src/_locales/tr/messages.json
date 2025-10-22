@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Cappuccino"
+  },
+  "viewAll": {
+    "message": "Tümünü Görüntüle"
+  },
+  "itemsSaved": {
+    "message": "öğe kaydedildi"
+  },
+  "copyItem": {
+    "message": "Kopyala"
+  },
+  "deleteItem": {
+    "message": "Sil"
+  },
+  "openItem": {
+    "message": "Aç"
+  },
+  "openImage": {
+    "message": "Resmi Aç"
+  },
+  "openVideo": {
+    "message": "Videoyu Aç"
+  },
+  "openArticle": {
+    "message": "Makaleyi Aç"
+  },
+  "calendarFrom": {
+    "message": "Başlangıç:"
+  },
+  "calendarTo": {
+    "message": "Bitiş:"
+  },
+  "clearDates": {
+    "message": "Tarihleri temizle"
+  },
+  "allWebsites": {
+    "message": "Tüm web siteleri"
+  },
+  "filterAll": {
+    "message": "Tümü"
+  },
+  "filterText": {
+    "message": "Metin"
+  },
+  "filterImages": {
+    "message": "Resimler"
+  },
+  "filterVideos": {
+    "message": "Videolar"
+  },
+  "filterResult": {
+    "message": "sonuç"
+  },
+  "filterResults": {
+    "message": "sonuç"
+  },
+  "searchPlaceholder": {
+    "message": "Kaydedilen içerikte ara..."
+  },
+  "errorNoItems": {
+    "message": "Öğe bulunamadı"
+  },
+  "errorNoSavedItems": {
+    "message": "Henüz kaydedilmiş öğe yok"
+  },
+  "errorAdjustFilters": {
+    "message": "Filtrelerinizi ayarlamayı deneyin"
+  },
+  "rightClickSave": {
+    "message": "Seçili metne sağ tıklayın ve \"Seçili metni kaydet\"i seçin"
+  },
+  "confirmDelete": {
+    "message": "Bu öğeyi silmek istediğinizden emin misiniz?"
+  },
+  "saveTextSuccess": {
+    "message": " Seçili metin başarıyla kaydedildi!"
+  },
+  "saveTextError": {
+    "message": "Seçili metin kaydedilirken hata oluştu."
+  },
+  "saveVideoSuccess": {
+    "message": " YouTube videosu başarıyla kaydedildi!"
+  },
+  "saveVideoError": {
+    "message": "YouTube videosu kaydedilirken hata oluştu"
+  },
+  "saveImageSuccess": {
+    "message": " Resim URL'si başarıyla kaydedildi!"
+  },
+  "saveImageError": {
+    "message": "Resim URL'si kaydedilirken hata oluştu"
+  },
+  "failedToCopy": {
+    "message": "Kopyalama başarısız"
+  },
+  "saveSelectedText": {
+    "message": "Seçili metni kaydet"
+  },
+  "saveImageUrl": {
+    "message": "Resim URL'sini kaydet"
+  },
+  "saveYouTubeVideo": {
+    "message": "YouTube videosunu kaydet"
+  },
+  "buyMeACappuccino": {
+    "message": "Bana bir Cappuccino ısmarla"
+  },
+  "leaveReview": {
+    "message": "Yorum bırak"
+  },
+  "footer": {
+    "message": "Made with ❤️ in NL by $AUTHOR$",
+    "placeholders": {
+      "author": {
+        "content": "$1",
+        "example": "CitizenDB"
+      }
+    }
+  }
+}

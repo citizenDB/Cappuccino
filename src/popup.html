@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Cappuccino</title>
+  <link rel="stylesheet" id="theme-stylesheet" href="/css/popup_light.css">
+</head>
+<body>
+  <div class="header">
+    <img width="32" src="img/logo.png" />
+    <h1 data-i18n="extensionName"></h1>
+    <div class="header-actions">
+      <button class="overview-btn" id="viewAll" data-i18n="viewAll"></button>
+    </div>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="Search saved items...">
+  </div>
+  <div class="stats" id="stats">
+    <span id="itemCount">0 items saved</span>
+  </div>
+  <div class="content" id="content">
+    <div class="empty-state">
+      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+        </path>
+      </svg>
+      <p data-i18n="errorNoSavedItems"></p>
+      <p style="font-size: 12px; color: #999; margin-top: 8px;" data-i18n="rightClickSave">
+      </p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

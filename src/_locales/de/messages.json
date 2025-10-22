@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Cappuccino"
+  },
+  "viewAll": {
+    "message": "Alle anzeigen"
+  },
+  "itemsSaved": {
+    "message": "Elemente gespeichert"
+  },
+  "copyItem": {
+    "message": "Kopieren"
+  },
+  "deleteItem": {
+    "message": "Löschen"
+  },
+  "openItem": {
+    "message": "Öffnen"
+  },
+  "openImage": {
+    "message": "Bild öffnen"
+  },
+  "openVideo": {
+    "message": "Video öffnen"
+  },
+  "openArticle": {
+    "message": "Artikel öffnen"
+  },
+  "calendarFrom": {
+    "message": "Von:"
+  },
+  "calendarTo": {
+    "message": "Bis:"
+  },
+  "clearDates": {
+    "message": "Daten löschen"
+  },
+  "allWebsites": {
+    "message": "Alle Websites"
+  },
+  "filterAll": {
+    "message": "Alle"
+  },
+  "filterText": {
+    "message": "Text"
+  },
+  "filterImages": {
+    "message": "Bilder"
+  },
+  "filterVideos": {
+    "message": "Videos"
+  },
+  "filterResult": {
+    "message": "Ergebnis"
+  },
+  "filterResults": {
+    "message": "Ergebnisse"
+  },
+  "searchPlaceholder": {
+    "message": "Gespeicherte Inhalte durchsuchen..."
+  },
+  "errorNoItems": {
+    "message": "Keine Elemente gefunden"
+  },
+  "errorNoSavedItems": {
+    "message": "Noch keine gespeicherten Elemente"
+  },
+  "errorAdjustFilters": {
+    "message": "Versuche deine Filter anzupassen"
+  },
+  "rightClickSave": {
+    "message": "Klicke mit der rechten Maustaste auf den ausgewählten Text und wähle \"Ausgewählten Text speichern\""
+  },
+  "confirmDelete": {
+    "message": "Bist du sicher, dass du dieses Element löschen möchtest?"
+  },
+  "saveTextSuccess": {
+    "message": " Ausgewählter Text erfolgreich gespeichert!"
+  },
+  "saveTextError": {
+    "message": "Fehler beim Speichern des ausgewählten Textes."
+  },
+  "saveVideoSuccess": {
+    "message": " YouTube-Video erfolgreich gespeichert!"
+  },
+  "saveVideoError": {
+    "message": "Fehler beim Speichern des YouTube-Videos"
+  },
+  "saveImageSuccess": {
+    "message": " Bild-URL erfolgreich gespeichert!"
+  },
+  "saveImageError": {
+    "message": "Fehler beim Speichern der Bild-URL"
+  },
+  "failedToCopy": {
+    "message": "Kopieren fehlgeschlagen"
+  },
+  "saveSelectedText": {
+    "message": "Ausgewählten Text speichern"
+  },
+  "saveImageUrl": {
+    "message": "Bild-URL speichern"
+  },
+  "saveYouTubeVideo": {
+    "message": "YouTube-Video speichern"
+  },
+  "buyMeACappuccino": {
+    "message": "Kauf mir einen Cappuccino"
+  },
+  "leaveReview": {
+    "message": "Bewertung hinterlassen"
+  },
+  "footer": {
+    "message": "Made with ❤️ in NL by $AUTHOR$",
+    "placeholders": {
+      "author": {
+        "content": "$1",
+        "example": "CitizenDB"
+      }
+    }
+  }
+}

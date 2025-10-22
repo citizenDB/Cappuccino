@@ -1,0 +1,122 @@
+{
+  "extensionName": {
+    "message": "Cappuccino"
+  },
+  "viewAll": {
+    "message": "Alles bekijken"
+  },
+  "itemsSaved": {
+    "message": "items opgeslagen"
+  },
+  "copyItem": {
+    "message": "Kopiëren"
+  },
+  "deleteItem": {
+    "message": "Verwijderen"
+  },
+  "openItem": {
+    "message": "Openen"
+  },
+  "openImage": {
+    "message": "Afbeelding openen"
+  },
+  "openVideo": {
+    "message": "Video openen"
+  },
+  "openArticle": {
+    "message": "Artikel openen"
+  },
+  "calendarFrom": {
+    "message": "Van:"
+  },
+  "calendarTo": {
+    "message": "Tot:"
+  },
+  "clearDates": {
+    "message": "Data wissen"
+  },
+  "allWebsites": {
+    "message": "Alle websites"
+  },
+  "filterAll": {
+    "message": "Alles"
+  },
+  "filterText": {
+    "message": "Tekst"
+  },
+  "filterImages": {
+    "message": "Afbeeldingen"
+  },
+  "filterVideos": {
+    "message": "Video's"
+  },
+  "filterResult": {
+    "message": "resultaat"
+  },
+  "filterResults": {
+    "message": "resultaten"
+  },
+  "searchPlaceholder": {
+    "message": "Zoeken..."
+  },
+  "errorNoItems": {
+    "message": "Geen items gevonden"
+  },
+  "errorNoSavedItems": {
+    "message": "Nog geen opgeslagen items"
+  },
+  "errorAdjustFilters": {
+    "message": "Probeer je filters aan te passen"
+  },
+  "rightClickSave": {
+    "message": "Klik met de rechtermuisknop op geselecteerde tekst en kies \"Geselecteerde tekst opslaan\""
+  },
+  "confirmDelete": {
+    "message": "Weet je zeker dat je dit item wilt verwijderen?"
+  },
+  "saveTextSuccess": {
+    "message": " Geselecteerde tekst succesvol opgeslagen!"
+  },
+  "saveTextError": {
+    "message": "Fout bij opslaan van geselecteerde tekst."
+  },
+  "saveVideoSuccess": {
+    "message": " YouTube-video succesvol opgeslagen!"
+  },
+  "saveVideoError": {
+    "message": "Fout bij opslaan van YouTube-video"
+  },
+  "saveImageSuccess": {
+    "message": " Afbeeldings-URL succesvol opgeslagen!"
+  },
+  "saveImageError": {
+    "message": "Fout bij opslaan van afbeeldings-URL"
+  },
+  "failedToCopy": {
+    "message": "Kopiëren mislukt"
+  },
+  "saveSelectedText": {
+    "message": "Geselecteerde tekst opslaan"
+  },
+  "saveImageUrl": {
+    "message": "Afbeeldings-URL opslaan"
+  },
+  "saveYouTubeVideo": {
+    "message": "YouTube-video opslaan"
+  },
+  "buyMeACappuccino": {
+    "message": "Koop een Cappuccino voor mij"
+  },
+  "leaveReview": {
+    "message": "Laat een beoordeling achter"
+  },
+  "footer": {
+    "message": "Made with ❤️ in NL by $AUTHOR$",
+    "placeholders": {
+      "author": {
+        "content": "$1",
+        "example": "CitizenDB"
+      }
+    }
+  }
+}

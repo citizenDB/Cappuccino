@@ -35,18 +35,18 @@ function formatDate(isoString) {
   if (diffMins < 60) return `${diffMins}m ago`;
   if (diffHours < 24) return `${diffHours}h ago`;
   if (diffDays < 7) return `${diffDays}d ago`;
-  
+
   return date.toLocaleDateString();
 }
 
 // i18n initialization
-document.addEventListener('DOMContentLoaded', function() {
-    const extensionName = chrome.i18n.getMessage('extensionName');
-    const clearDates = chrome.i18n.getMessage('clearDates');
-    document.getElementById('searchInput').placeholder = chrome.i18n.getMessage('searchPlaceholder');
-     
-    translatePage();
-    loadSavedTheme();
+document.addEventListener('DOMContentLoaded', function () {
+  const extensionName = chrome.i18n.getMessage('extensionName');
+  const clearDates = chrome.i18n.getMessage('clearDates');
+  document.getElementById('searchInput').placeholder = chrome.i18n.getMessage('searchPlaceholder');
+
+  translatePage();
+  loadSavedTheme();
 });
 
 // Load saved theme from background script
@@ -56,7 +56,7 @@ async function loadSavedTheme() {
     const response = await chrome.runtime.sendMessage({
       action: 'getTheme'
     });
-    
+
     if (response && response.theme) {
       applyTheme(response.theme);
     } else {
@@ -80,7 +80,6 @@ function applyTheme(theme) {
 
   } else {
     themeLink.href = 'css/popup_light.css';
-
   }
 }
 
@@ -89,9 +88,21 @@ function renderTexts(texts, totalCount = null) {
   const content = document.getElementById("content");
   const itemCount = document.getElementById("itemCount");
 
+  const filterResult = chrome.i18n.getMessage('filterResult');
+  const filterResults = chrome.i18n.getMessage('filterResults');
   // Use totalCount if provided (for search results), otherwise use texts length
   const displayCount = totalCount !== null ? totalCount : texts.length;
-  itemCount.textContent = `${displayCount} item${displayCount !== 1 ? 's' : ''} saved`;
+
+  const count = texts.length;
+  const pr = new Intl.PluralRules(navigator.language);
+  const pluralForm = pr.select(count);
+
+  const messages = {
+    one: `${count} ${filterResult}`,
+    other: `${count} ${filterResults}`
+  };
+
+  itemCount.textContent = messages[pluralForm];
 
   const errorNoSavedItems = chrome.i18n.getMessage('errorNoSavedItems');
   const rightClickSave = chrome.i18n.getMessage('rightClickSave');
@@ -123,7 +134,7 @@ function renderTexts(texts, totalCount = null) {
       const isYouTube = item.type === 'video';
       const imageUrl = isYouTube ? item.imageUrl : item.imageUrl;
       const linkUrl = isYouTube ? item.videoUrl : item.imageUrl;
-      
+
       return `
       <div class="text-item image-item${isYouTube ? ' youtube-item' : ''}">
         <div class="image-preview">
@@ -173,15 +184,10 @@ function renderTexts(texts, totalCount = null) {
       // Text item
       return `
       <div class="text-item">
-
-        <div class="text-meta">
-
-     <div class="page-img">
-        <div class="placeholder"></div>
-           
-          </div>
-          
-
+      <div class="text-meta">
+        <div class="page-img">
+            <div class="placeholder"></div> 
+        </div>
         <div class="page-info">
           <a href="${escapeHtml(item.url)}" class="page-title" target="_blank" title="${escapeHtml(item.text)}">
           ${escapeHtml(item.text.length > 50 ? item.text.substring(0, 60) + '...' : item.text)}
@@ -227,34 +233,34 @@ function renderTexts(texts, totalCount = null) {
     btn.addEventListener('click', async (e) => {
       const text = e.currentTarget.dataset.text;
       const button = e.currentTarget;
-      
+
       try {
         // Add temporary class for visual feedback
         button.classList.add('copying');
-        
+
         // Try to write to clipboard
         await navigator.clipboard.writeText(text);
-        
+
         // Success feedback
         button.classList.remove('copying');
         button.classList.add('copied');
-        
+
         // Reset after animation
         setTimeout(() => {
           button.classList.remove('copied');
         }, 1500);
       } catch (err) {
         console.error('Failed to copy:', err);
-        
+
         // Error feedback
         button.classList.remove('copying');
         button.classList.add('copy-error');
-        
+
         // Reset after animation
         setTimeout(() => {
           button.classList.remove('copy-error');
         }, 1500);
-        
+
         // Fallback method
         try {
           const textarea = document.createElement('textarea');
@@ -263,7 +269,7 @@ function renderTexts(texts, totalCount = null) {
           textarea.select();
           document.execCommand('copy');
           document.body.removeChild(textarea);
-          
+
           // Show success even for fallback
           button.classList.add('copied');
           setTimeout(() => {
@@ -293,7 +299,7 @@ function escapeHtml(text) {
 
 // Load texts (limited to 5 most recent)
 function loadTexts() {
-  chrome.runtime.sendMessage({ 
+  chrome.runtime.sendMessage({
     action: "getAllTexts"
   }, (response) => {
     if (chrome.runtime.lastError) {
@@ -303,11 +309,11 @@ function loadTexts() {
     if (response && response.success) {
       const allItems = response.data;
       const totalCount = allItems.length;
-      
+
       // Sort by timestamp (newest first) and limit to 5
       const sortedItems = allItems.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       const limitedItems = sortedItems.slice(0, POPUP_ITEM_LIMIT);
-      
+
       allTexts = limitedItems;
       renderTexts(limitedItems, totalCount);
     } else {
@@ -325,7 +331,7 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
   }
 
   // Get all texts and filter locally
-  chrome.runtime.sendMessage({ 
+  chrome.runtime.sendMessage({
     action: "getAllTexts"
   }, (response) => {
     if (chrome.runtime.lastError) {
@@ -334,31 +340,31 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
     }
     if (response && response.success) {
       const allItems = response.data;
-      
+
       const filtered = allItems.filter(item => {
         const pageTitle = (item.pageTitle || '').toLowerCase();
         const url = item.url.toLowerCase();
 
-        switch(item.type) {
+        switch (item.type) {
           case 'video':
             return item.videoUrl.toLowerCase().includes(query) ||
-                   pageTitle.includes(query) ||
-                   url.includes(query);
+              pageTitle.includes(query) ||
+              url.includes(query);
           case 'image':
             return item.imageUrl.toLowerCase().includes(query) ||
-                   pageTitle.includes(query) ||
-                   url.includes(query);
+              pageTitle.includes(query) ||
+              url.includes(query);
           default: // text
             return item.text.toLowerCase().includes(query) ||
-                   pageTitle.includes(query) ||
-                   url.includes(query);
+              pageTitle.includes(query) ||
+              url.includes(query);
         }
       });
-      
+
       const totalMatches = filtered.length;
       const sortedFiltered = filtered.sort((a, b) => new Date(b.timestamp) - new Date(a.timestamp));
       const limitedResults = sortedFiltered.slice(0, POPUP_ITEM_LIMIT);
-      
+
       renderTexts(limitedResults, totalMatches);
     } else {
       console.error("Error searching texts:", response?.error || "No response");
@@ -368,7 +374,7 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 
 // View all handler
 document.getElementById('viewAll').addEventListener('click', () => {
-    chrome.tabs.create({ url: 'overview.html' });
+  chrome.tabs.create({ url: 'overview.html' });
 });
 
 // Initialize

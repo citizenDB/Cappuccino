@@ -211,15 +211,6 @@ document.getElementById('endDate').addEventListener('change', (e) => {
     renderTexts(filterTexts());
 });
 
-// Clear date filters
-// document.getElementById('clearDates').addEventListener('click', () => {
-//     document.getElementById('startDate').value = '';
-//     document.getElementById('endDate').value = '';
-//     startDate = null;
-//     endDate = null;
-//     renderTexts(filterTexts());
-// });
-
 function renderTexts(texts) {
     const content = document.getElementById("content");
     const resultsCount = document.getElementById('resultsCount');
@@ -244,9 +235,6 @@ function renderTexts(texts) {
 
     resultsCount.textContent = messages[pluralForm];
 
-
-    //resultsCount.textContent = `${texts.length} result${texts.length !== 1 ? 's' : ''}`;
-    
     if (texts.length === 0) {
         content.innerHTML = `
             <div class="no-items">

@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
        themeToggle.addEventListener('click', toggleTheme);
     }
 
-    const authorURL = "<a href='https://www.github.com/citizenDB/Cappucino' target='_blank'>CitizenDB</a>";
+    const authorURL = "<a href='https://www.github.com/citizenDB/Cappuccino' target='_blank'>CitizenDB</a>";
     const footerElement = document.querySelector('[data-i18n="footer"]');
     footerElement.innerHTML = chrome.i18n.getMessage("footer", [authorURL]);
 
@@ -406,3 +406,4 @@ function translatePage() {
     }
   });
 }
+

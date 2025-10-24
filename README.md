@@ -12,7 +12,7 @@ We've all been there: 47 browser tabs open, a bookmarks folder titled "Read Late
 ## 🚀 How It Works
 
 1. Find something worth your time while browsing
-2. Click the Cappuccino icon to save it instantly
+2. Right-click on any page to save items to Cappuccino
 3. Open your Cappuccino library during your next coffee break
 4. Actually read, watch, and engage with content that matters
 
@@ -41,3 +41,6 @@ Your data is yours alone. Cappuccino uses your browser's local storage, which me
 - No tracking cookies
 - No user profiles or databases
 - Complete control over your saved content
+
+## Pin Cappuccino to your toolbar
+![cappuccino-pin-to-toolbar](https://github.com/user-attachments/assets/a50124ab-6875-4a4f-9b86-971b3682dfcd)

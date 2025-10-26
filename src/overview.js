@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerElement = document.querySelector('[data-i18n="footer"]');
     footerElement.innerHTML = chrome.i18n.getMessage("footer", [authorURL]);
 
+    const exportCSVBtn = document.getElementById('exportCSV');
+    if (exportCSVBtn) {
+        exportCSVBtn.addEventListener('click', exportToCSV);
+    }
+
 });
 
 // Load saved theme from background script
@@ -407,3 +412,34 @@ function translatePage() {
   });
 }
 
+async function exportToCSV() {
+    try {
+        const response = await chrome.runtime.sendMessage({ action: "exportToCSV" });
+        
+        if (response.success) {
+            const blob = new Blob([response.csv], { type: 'text/csv;charset=utf-8;' });
+            
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            
+            const timestamp = new Date().toISOString().split('T')[0];
+            link.setAttribute('href', url);
+            link.setAttribute('download', `cappuccino_export_${timestamp}.csv`);
+            link.style.visibility = 'hidden';
+            
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            
+            URL.revokeObjectURL(url);
+            
+            console.log('CSV export successful');
+        } else {
+            console.error('Export failed:', response.error);
+            alert('Failed to export CSV. Please try again.');
+        }
+    } catch (error) {
+        console.error('Error exporting CSV:', error);
+        alert('An error occurred while exporting. Please try again.');
+    }
+}

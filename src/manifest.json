@@ -1,10 +1,10 @@
 {
   "manifest_version": 3,
   "name": "Cappuccino",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "citizenDB",
   "homepage_url": "https://github.com/citizenDB/Cappuccino/",
-  "description": "Curate content worth savoring. Save articles, videos, and images you'll actually revisit - crafted with care, like your morning cappuccino.",
+  "description": "Save articles, videos, and images you'll actually revisit - crafted with care, like your morning cappuccino.",
   "default_locale": "en",
   "permissions": [
     "contextMenus",

@@ -480,6 +480,16 @@ if (request.action === 'saveTheme') {
     return true; 
   }
 
+  // Export to CSV handler
+  if (request.action === "exportToCSV") {
+    if (!db) {
+      initDB().then(() => exportToCSV(sendResponse));
+    } else {
+      exportToCSV(sendResponse);
+    }
+    return true;
+  }
+
 });
 
 function getAllTexts(sendResponse) {
@@ -579,13 +589,51 @@ async function createActionContextMenus() {
 chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     switch (info.menuItemId) {
         case "github":
-            chrome.tabs.create({ url: 'https://github.com/citizenDB' });
+            chrome.tabs.create({ url: 'https://github.com/citizenDB/Cappuccino' });
             break;
         case "donate":
             chrome.tabs.create({ url: 'https://buymeacoffee.com/citizenDB' });
             break;
         case "review":
-            chrome.tabs.create({ url: `https://chromewebstore.google.com/detail/${chrome.runtime.id}/reviews` });
+            chrome.tabs.create({ url: `https://microsoftedge.microsoft.com/addons/detail/cappuccino/hflhjjnblgkeekddnfnhmkakbopgbemf` });
             break;
     }
 });
+
+// Export saved items to CSV
+function exportToCSV(sendResponse) {
+  const transaction = db.transaction(["savedItems"], "readonly");
+  const objectStore = transaction.objectStore("savedItems");
+  const request = objectStore.getAll();
+
+  request.onsuccess = () => {
+    const items = request.result;
+    
+    const headers = ['ID', 'Type', 'Content', 'Page Title', 'URL', 'Timestamp'];
+    
+    const rows = items.map(item => {
+      const content = item.type === 'text' 
+        ? item.text 
+        : item.type === 'video' 
+          ? item.videoUrl 
+          : item.imageUrl;
+      
+      return [
+        item.id,
+        item.type,
+        `"${(content || '').replace(/"/g, '""')}"`,
+        `"${(item.pageTitle || '').replace(/"/g, '""')}"`,
+        item.url,
+        item.timestamp
+      ].join(',');
+    });
+    
+    const csv = [headers.join(','), ...rows].join('\n');
+    
+    sendResponse({ success: true, csv: csv });
+  };
+
+  request.onerror = () => {
+    sendResponse({ success: false, error: request.error });
+  };
+}

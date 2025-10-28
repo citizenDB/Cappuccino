@@ -110,12 +110,18 @@
   "leaveReview": {
     "message": "Laisser un avis"
   },
+  "toggleTheme": {
+    "message": "Changer le thème"
+  },
+  "exportToCsv": {
+    "message": "Exporter au format CSV"
+  },
   "footer": {
     "message": "Made with ❤️ in NL by $AUTHOR$",
     "placeholders": {
       "author": {
         "content": "$1",
-        "example": "CitizenDB"
+        "example": "citizenDB"
       }
     }
   }

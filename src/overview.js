@@ -19,7 +19,7 @@ chrome.runtime.sendMessage({ action: "getAllTexts" }, (response) => {
 document.addEventListener('DOMContentLoaded', function() {
     const extensionName = chrome.i18n.getMessage('extensionName');
     const clearDates = chrome.i18n.getMessage('clearDates');
-     document.getElementById('searchInput').placeholder = chrome.i18n.getMessage('searchPlaceholder');
+    document.getElementById('searchInput').placeholder = chrome.i18n.getMessage('searchPlaceholder');
      
     translatePage();
     loadSavedTheme();
@@ -29,7 +29,16 @@ document.addEventListener('DOMContentLoaded', function() {
        themeToggle.addEventListener('click', toggleTheme);
     }
 
-    const authorURL = "<a href='https://www.github.com/citizenDB/Cappuccino' target='_blank'>CitizenDB</a>";
+    const leaveReview = document.getElementById('leaveReview');
+    if (leaveReview) {
+        leaveReview.addEventListener('click', () => {
+            chrome.tabs.create({ 
+                url: 'https://microsoftedge.microsoft.com/addons/detail/cappuccino/hflhjjnblgkeekddnfnhmkakbopgbemf' 
+            });
+        });
+    }
+
+    const authorURL = "<a href='https://www.github.com/citizenDB/Cappuccino' target='_blank'>citizenDB</a>";
     const footerElement = document.querySelector('[data-i18n="footer"]');
     footerElement.innerHTML = chrome.i18n.getMessage("footer", [authorURL]);
 
@@ -115,17 +124,6 @@ function updateStats() {
     const imageCount = allTexts.filter(item => item.type === 'image').length;
     const videoCount = allTexts.filter(item => item.type === 'video').length;
 
-    const documentCount = allTexts.filter(item => {
-        const url = item.pageTitle.toLowerCase();
-        return url.endsWith('.pdf') || 
-               url.endsWith('.doc') || 
-               url.endsWith('.docx') ||
-               url.endsWith('.xls') ||
-               url.endsWith('.xlsx') ||
-               url.endsWith('.ppt') ||
-               url.endsWith('.pptx');
-    }).length;
-    
     document.getElementById('textCount').textContent = ' (' + textCount + ')';
     document.getElementById('imageCount').textContent = ' (' + imageCount + ')';
     document.getElementById('videoCount').textContent = ' (' + videoCount + ')';
@@ -216,6 +214,7 @@ document.getElementById('endDate').addEventListener('change', (e) => {
     renderTexts(filterTexts());
 });
 
+// Renfder texts to the page
 function renderTexts(texts) {
     const content = document.getElementById("content");
     const resultsCount = document.getElementById('resultsCount');
@@ -410,8 +409,23 @@ function translatePage() {
       element.textContent = message;
     }
   });
+
+    const i18nElements = [
+    'themeToggle',
+    'exportToCsv',
+    'leaveReview'
+    ];
+
+    i18nElements.forEach(id => {
+    const element = document.getElementById(id);
+    if (element) {
+        element.title = chrome.i18n.getMessage(id);
+    }
+    });
+
 }
 
+// Export to CSV functionality
 async function exportToCSV() {
     try {
         const response = await chrome.runtime.sendMessage({ action: "exportToCSV" });

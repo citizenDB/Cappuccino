@@ -109,13 +109,18 @@
   },
   "leaveReview": {
     "message": "Yorum bırak"
+  }, "toggleTheme": {
+    "message": "Temayı değiştir"
+  },
+  "exportToCsv": {
+    "message": "CSV olarak aktar"
   },
   "footer": {
     "message": "Made with ❤️ in NL by $AUTHOR$",
     "placeholders": {
       "author": {
         "content": "$1",
-        "example": "CitizenDB"
+        "example": "citizenDB"
       }
     }
   }

@@ -24,6 +24,7 @@ We've all been there: 47 browser tabs open, a bookmarks folder titled "Read Late
 - Visual Library - See what you saved at a glance, not just a list of forgotten URLs
 - Offline Access - Access your saved content anytime, even without internet
 - Clean Interface - Distraction-free experience when you're ready to actually read and watch
+- Easy export - Export all your items to CSV in one click
 
 ## 🎯 Perfect For
 

@@ -110,12 +110,18 @@
   "leaveReview": {
     "message": "Tinggalkan ulasan"
   },
+  "toggleTheme": {
+    "message": "Ubah tema"
+  },
+  "exportToCsv": {
+    "message": "Ekspor ke CSV"
+  },
   "footer": {
     "message": "Made with ❤️ in NL by $AUTHOR$",
     "placeholders": {
       "author": {
         "content": "$1",
-        "example": "CitizenDB"
+        "example": "citizenDB"
       }
     }
   }

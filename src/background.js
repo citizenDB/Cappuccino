@@ -1,7 +1,7 @@
 /*******************************************************************************
 
     Cappuccino
-    Copyright (C) 2025-present CitizenDB
+    Copyright (C) 2025-present citizenDB
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -16,7 +16,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see {http://www.gnu.org/licenses/}.
 
-    Home: https://github.com/CitizenDB/Cappuccino
+    Home: https://github.com/citizenDB/Cappuccino
 */
 
 // Initialize IndexedDB
@@ -168,7 +168,7 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
         try {
           await chrome.tabs.sendMessage(tab.id, {
             action: "showNotification",
-            message: chrome.i18n.getMessage("saveVideoSuccess"),
+            message: chrome.i18n.getMessage("saveTextSuccess"),
           }).catch(() => {
             console.log("Content script not available for notification");
           });
@@ -573,12 +573,6 @@ async function createActionContextMenus() {
     });
 
     chrome.contextMenus.create({
-        id: "donate",
-        title: "🧋 " + chrome.i18n.getMessage("buyMeACappuccino"),
-        contexts: ["action"]
-    });
-
-    chrome.contextMenus.create({
         id: "review",
         title: "⭐ " + chrome.i18n.getMessage("leaveReview"),
         contexts: ["action"]
@@ -590,9 +584,6 @@ chrome.contextMenus.onClicked.addListener(async (info, tab) => {
     switch (info.menuItemId) {
         case "github":
             chrome.tabs.create({ url: 'https://github.com/citizenDB/Cappuccino' });
-            break;
-        case "donate":
-            chrome.tabs.create({ url: 'https://buymeacoffee.com/citizenDB' });
             break;
         case "review":
             chrome.tabs.create({ url: `https://microsoftedge.microsoft.com/addons/detail/cappuccino/hflhjjnblgkeekddnfnhmkakbopgbemf` });

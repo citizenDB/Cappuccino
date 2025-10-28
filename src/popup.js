@@ -16,7 +16,7 @@
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see {http://www.gnu.org/licenses/}.
 
-    Home: https://github.com/CitizenDB/Cappuccino
+    Home: https://github.com/citizenDB/Cappuccino
 */
 
 let allTexts = [];
@@ -374,7 +374,18 @@ document.getElementById('searchInput').addEventListener('input', (e) => {
 
 // View all handler
 document.getElementById('viewAll').addEventListener('click', () => {
-  chrome.tabs.create({ url: 'overview.html' });
+  const overviewUrl = chrome.runtime.getURL('overview.html');
+  
+  chrome.tabs.query({}, (tabs) => {
+    const existingTab = tabs.find(tab => tab.url === overviewUrl);
+    
+    if (existingTab) {
+      chrome.tabs.update(existingTab.id, { active: true });
+      chrome.windows.update(existingTab.windowId, { focused: true });
+    } else {
+      chrome.tabs.create({ url: overviewUrl });
+    }
+  });
 });
 
 // Initialize
